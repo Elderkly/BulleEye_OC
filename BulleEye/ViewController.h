@@ -10,6 +10,9 @@
 
 @interface ViewController : UIViewController
 
+-(IBAction)showAlert;
+
+-(IBAction)showTag;
 
 @end
 
