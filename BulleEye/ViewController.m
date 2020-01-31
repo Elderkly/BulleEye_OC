@@ -8,23 +8,27 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
-- (IBAction)sliderMoved:(id)sender;
+@interface ViewController (){
+    int currentValue;
+}
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    currentValue = 50;
     // Do any additional setup after loading the view.
 }
 
 - (IBAction)showAlert{
     
+    NSString *message = [NSString stringWithFormat:@"滑动条的数值是%d",currentValue];
+    
     //初始化提示框；
       UIAlertController *alert = [UIAlertController
                                   alertControllerWithTitle:@"提示"
-                                  message:@"按钮被点击了"
+                                  message:message
                                   preferredStyle:  UIAlertControllerStyleAlert];
      
       [alert addAction:[UIAlertAction
@@ -37,8 +41,10 @@
       //弹出提示框；
       [self presentViewController:alert animated:true completion:nil];
 }
+
 - (IBAction)sliderMoved:(id)sender {
     UISlider *slider = (UISlider*)sender;
-    NSLog(@"滑动条的当前数值是：%f",slider.value);
+    currentValue = (int)lroundf(slider.value);
+    NSLog(@"滑动条的当前数值是：%d",currentValue);
 }
 @end
