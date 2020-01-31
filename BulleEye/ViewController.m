@@ -9,7 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+- (IBAction)sliderMoved:(id)sender;
 @end
 
 @implementation ViewController
@@ -37,33 +37,8 @@
       //弹出提示框；
       [self presentViewController:alert animated:true completion:nil];
 }
-
-- (IBAction)showTag {
-    UIAlertController *alert = [UIAlertController
-                                alertControllerWithTitle:@"Title"
-                                message:@"Messgae"
-                                preferredStyle:UIAlertControllerStyleAlert];
-    [alert addAction:[UIAlertAction
-                      actionWithTitle:@"title"
-                      style:UIAlertActionStyleCancel
-                      handler:^(UIAlertAction * _Nonnull action) {
-        
-    }]];
-    
-    [alert addAction:[UIAlertAction
-                      actionWithTitle:@"title2"
-                      style:UIAlertActionStyleDefault
-                      handler:^(UIAlertAction * _Nonnull action) {
-        
-    }]];
-    
-    [alert addAction:[UIAlertAction
-                      actionWithTitle:@"title2"
-                      style:UIAlertActionStyleDestructive
-                      handler:^(UIAlertAction * _Nonnull action) {
-        
-    }]];
-    
-    [self presentViewController:alert animated:true completion:nil];
+- (IBAction)sliderMoved:(id)sender {
+    UISlider *slider = (UISlider*)sender;
+    NSLog(@"滑动条的当前数值是：%f",slider.value);
 }
 @end

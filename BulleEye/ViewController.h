@@ -12,7 +12,5 @@
 
 -(IBAction)showAlert;
 
--(IBAction)showTag;
-
 @end
 
