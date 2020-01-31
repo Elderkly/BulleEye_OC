@@ -39,7 +39,7 @@
 - (IBAction)showAlert{
     
     NSString *message;
-    if (currentValue == targetValue) message = [NSString stringWithFormat:@"恭喜你猜中了！"];
+    if (currentValue == targetValue) message = @"恭喜你猜中了！";
     else message = [NSString stringWithFormat:@"滑动条的数值是%d\n我们的目标数值是%d",currentValue,targetValue];
     
     //初始化提示框；
