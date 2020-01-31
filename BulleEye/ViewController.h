@@ -11,6 +11,7 @@
 @interface ViewController : UIViewController
 
 -(IBAction)showAlert;
+@property (strong, nonatomic) IBOutlet UISlider *slider;
 
 @end
 

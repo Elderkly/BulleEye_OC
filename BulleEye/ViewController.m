@@ -15,9 +15,11 @@
 
 @implementation ViewController
 
+@synthesize slider;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    currentValue = 50;
+    currentValue = self.slider.value;
     // Do any additional setup after loading the view.
 }
 
@@ -45,6 +47,6 @@
 - (IBAction)sliderMoved:(id)sender {
     UISlider *slider = (UISlider*)sender;
     currentValue = (int)lroundf(slider.value);
-    NSLog(@"滑动条的当前数值是：%d",currentValue);
+//    NSLog(@"滑动条的当前数值是：%d",currentValue);
 }
 @end
