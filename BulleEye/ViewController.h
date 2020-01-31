@@ -12,6 +12,6 @@
 
 -(IBAction)showAlert;
 @property (strong, nonatomic) IBOutlet UISlider *slider;
-
+@property (strong, nonatomic) IBOutlet UILabel *targetLabel;
 @end
 

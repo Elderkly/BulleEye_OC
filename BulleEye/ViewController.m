@@ -10,22 +10,37 @@
 
 @interface ViewController (){
     int currentValue;
+    int targetValue;
 }
 @end
 
 @implementation ViewController
 
 @synthesize slider;
+@synthesize targetLabel;
+
+- (void)startNewRound {
+    currentValue = 50;
+    self.slider.value = currentValue;
+    targetValue = 1 + (arc4random() % 100);
+}
+
+- (void)updateLabels{
+    self.targetLabel.text = [NSString stringWithFormat:@"%d",targetValue];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    currentValue = self.slider.value;
     // Do any additional setup after loading the view.
+    [self startNewRound];
+    [self updateLabels];
 }
 
 - (IBAction)showAlert{
     
-    NSString *message = [NSString stringWithFormat:@"滑动条的数值是%d",currentValue];
+    NSString *message;
+    if (currentValue == targetValue) message = [NSString stringWithFormat:@"恭喜你猜中了！"];
+    else message = [NSString stringWithFormat:@"滑动条的数值是%d\n我们的目标数值是%d",currentValue,targetValue];
     
     //初始化提示框；
       UIAlertController *alert = [UIAlertController
@@ -42,6 +57,9 @@
      
       //弹出提示框；
       [self presentViewController:alert animated:true completion:nil];
+    
+    [self startNewRound];
+    [self updateLabels];
 }
 
 - (IBAction)sliderMoved:(id)sender {
