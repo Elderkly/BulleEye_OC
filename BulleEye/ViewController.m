@@ -55,24 +55,28 @@
     NSString *message;
     if (currentValue == targetValue) message = @"恭喜你猜中了！";
     else message = [NSString stringWithFormat:@"你的得分为%d",points];
+    //  提示标题
+    NSString *title;
+    title = difference == 0 ? @"太牛逼了" : difference < 5 ? @"太可惜了" : difference < 10 ? @"差一点" : @"不太行";
+    score += difference == 0 ? 100 : difference == 1 ? 50 : 0;
     //初始化提示框；
       UIAlertController *alert = [UIAlertController
-                                  alertControllerWithTitle:@"提示"
+                                  alertControllerWithTitle:title
                                   message:message
                                   preferredStyle:  UIAlertControllerStyleAlert];
      
       [alert addAction:[UIAlertAction
-                        actionWithTitle:@"确定"
+                        actionWithTitle:@"再整一次"
                         style:UIAlertActionStyleDefault
                         handler:^(UIAlertAction * _Nonnull action) {
         //点击按钮的响应事件；
+          [self startNewRound];
+          [self updateLabels];
       }]];
      
       //弹出提示框；
       [self presentViewController:alert animated:true completion:nil];
     
-    [self startNewRound];
-    [self updateLabels];
 }
 
 - (IBAction)sliderMoved:(id)sender {
