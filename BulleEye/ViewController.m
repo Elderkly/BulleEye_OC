@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "AboutClass.h"
 
 @interface ViewController (){
     int currentValue;
@@ -86,9 +87,20 @@
     [self updateLabels];
 }
 
+- (IBAction)showInfo:(id)sender {
+//    AboutClass *aboutClass = [[AboutClass alloc] init];
+//    [self.navigationController pushViewController:aboutClass animated:YES];
+
+    NSLog(@"PUSH");
+}
+
 - (IBAction)sliderMoved:(id)sender {
     UISlider *slider = (UISlider*)sender;
     currentValue = (int)lroundf(slider.value);
 //    NSLog(@"滑动条的当前数值是：%d",currentValue);
+}
+
+- (IBAction)unwindSegue:(UIStoryboardSegue *)sender{
+    NSLog(@"pop %@", sender);
 }
 @end

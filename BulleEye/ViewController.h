@@ -12,6 +12,7 @@
 
 -(IBAction)showAlert;
 - (IBAction)startOver:(id)sender;
+- (IBAction)showInfo:(id)sender;
 @property (strong, nonatomic) IBOutlet UISlider *slider;
 @property (strong, nonatomic) IBOutlet UILabel *targetLabel;
 @property (strong, nonatomic) IBOutlet UILabel *scoreLabel;

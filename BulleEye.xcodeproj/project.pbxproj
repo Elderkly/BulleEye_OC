@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6AE1A21123E6A2DC006C5DE7 /* AboutClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE1A21023E6A2DC006C5DE7 /* AboutClass.m */; };
 		842B000123D2DE6100E77296 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 842B000023D2DE6100E77296 /* main.m */; };
 		842BFFF023D2DE5F00E77296 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 842BFFEF23D2DE5F00E77296 /* AppDelegate.m */; };
 		842BFFF323D2DE5F00E77296 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 842BFFF223D2DE5F00E77296 /* SceneDelegate.m */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6AE1A21023E6A2DC006C5DE7 /* AboutClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutClass.m; sourceTree = "<group>"; };
+		6AE1A21223E6A2ED006C5DE7 /* AboutClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutClass.h; sourceTree = "<group>"; };
 		842B000023D2DE6100E77296 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		842BFFEB23D2DE5F00E77296 /* BulleEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BulleEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		842BFFEE23D2DE5F00E77296 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -72,6 +75,8 @@
 				842BFFFC23D2DE6100E77296 /* LaunchScreen.storyboard */,
 				842BFFFF23D2DE6100E77296 /* Info.plist */,
 				842B000023D2DE6100E77296 /* main.m */,
+				6AE1A21223E6A2ED006C5DE7 /* AboutClass.h */,
+				6AE1A21023E6A2DC006C5DE7 /* AboutClass.m */,
 			);
 			path = BulleEye;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 			files = (
 				842BFFF623D2DE5F00E77296 /* ViewController.m in Sources */,
 				842BFFF023D2DE5F00E77296 /* AppDelegate.m in Sources */,
+				6AE1A21123E6A2DC006C5DE7 /* AboutClass.m in Sources */,
 				842B000123D2DE6100E77296 /* main.m in Sources */,
 				842BFFF323D2DE5F00E77296 /* SceneDelegate.m in Sources */,
 			);
