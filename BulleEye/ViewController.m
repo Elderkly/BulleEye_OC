@@ -79,6 +79,13 @@
     
 }
 
+- (IBAction)startOver:(id)sender {
+    score = 0;
+    round = 0;
+    [self startNewRound];
+    [self updateLabels];
+}
+
 - (IBAction)sliderMoved:(id)sender {
     UISlider *slider = (UISlider*)sender;
     currentValue = (int)lroundf(slider.value);
